@@ -80,9 +80,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fac6b3e848a97c4408e56d54b2707a84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  getInput: 1
   moveSpeed: 5
   rotationSpeed: 250
-  cooldownTime: 1
 --- !u!114 &4573005288505672010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95,7 +95,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8bb8294f1518524ca8b8c7213f3d726, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemImageHolder: {fileID: 0}
   items: []
   activeItemIndex: -1
 --- !u!114 &3220107576522094951
@@ -112,7 +111,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   items: []
   shipPickup: {fileID: 4573005288505672010}
-  itemImageHolder: {fileID: 0}
 --- !u!114 &1441027210929542067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,7 +125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shipPickup: {fileID: 4573005288505672010}
   shipMovement: {fileID: 896679031009646393}
-  itemImageHolder: {fileID: 0}
+  shipShoot: {fileID: 8166537877003479703}
 --- !u!114 &8166537877003479703
 MonoBehaviour:
   m_ObjectHideFlags: 0

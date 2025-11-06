@@ -4,7 +4,7 @@ using UnityEngine;
 public class ShipShoot : MonoBehaviour
 {
     [SerializeField] private GameObject laserPrefab;
-    [SerializeField] private float cooldownTime = 3f;
+    public float cooldownTime = 3f;
     private float cooldownCounter = 0f;
 
     private void Update()

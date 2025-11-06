@@ -6,7 +6,8 @@ using static UnityEditor.Progress;
 public class ShipItemUse : MonoBehaviour
 {
     [SerializeField] ShipPickup shipPickup;
-    [SerializeField] ShipMovement shipMovement;
+    [SerializeField] Movement shipMovement;
+    [SerializeField] ShipShoot shipShoot;
     private Image itemImageHolder;
 
     private Text displayText;
@@ -36,7 +37,7 @@ public class ShipItemUse : MonoBehaviour
             else if (shipPickup.items[shipPickup.activeItemIndex] == Color.red)
             {
                 StartCoroutine(displayText.ShowMessage(" + Fire Rate", 3f));
-                shipMovement.cooldownTime -= 0.1f;
+                shipShoot.cooldownTime -= 0.1f;
             }
             else if (shipPickup.items[shipPickup.activeItemIndex] == Color.green)
             {
