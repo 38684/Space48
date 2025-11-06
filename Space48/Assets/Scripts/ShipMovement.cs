@@ -10,17 +10,12 @@ public class ShipMovement : MonoBehaviour
 
     void Update()
     {
-        Move();   
-        Rotate();
+        Move();
     }
 
-    void Move() {
-
-        transform.position = transform.position + transform.forward * moveSpeed * Input.GetAxis("Vertical") * Time.deltaTime;
-        
-    }
-    void Rotate()
+    void Move() 
     {
+        transform.position = transform.position + transform.forward * moveSpeed * Input.GetAxis("Vertical") * Time.deltaTime;
         transform.Rotate(transform.up * rotationSpeed * Time.deltaTime * Input.GetAxis("Horizontal"));
     }
 

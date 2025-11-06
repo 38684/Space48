@@ -30,17 +30,17 @@ public class ShipItemUse : MonoBehaviour
 
             if (shipPickup.items[shipPickup.activeItemIndex] == Color.blue)
             {
-                StartCoroutine(displayText.ShowMessage(" +  Move Speed"));
+                StartCoroutine(displayText.ShowMessage(" +  Move Speed", 3f));
                 shipMovement.moveSpeed += 5;
             }
             else if (shipPickup.items[shipPickup.activeItemIndex] == Color.red)
             {
-                StartCoroutine(displayText.ShowMessage(" + Fire Rate"));
+                StartCoroutine(displayText.ShowMessage(" + Fire Rate", 3f));
                 shipMovement.cooldownTime -= 0.1f;
             }
             else if (shipPickup.items[shipPickup.activeItemIndex] == Color.green)
             {
-                StartCoroutine(displayText.ShowMessage(" + Rotation Speed"));
+                StartCoroutine(displayText.ShowMessage(" + Rotation Speed", 3f));
                 shipMovement.rotationSpeed += 10;
             }
             shipPickup.items.RemoveAt(shipPickup.activeItemIndex);

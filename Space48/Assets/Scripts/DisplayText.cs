@@ -1,4 +1,4 @@
-using System;
+
 using System.Collections;
 using TMPro;
 using UnityEngine;
@@ -10,21 +10,14 @@ public class Text : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(Introduction());
+        StartCoroutine(ShowMessage("Welcome to Space 4 8. \n Move your ship with the arrows or WASD. \n Shoot with SPACE. \n Gather pickups and cycle with 'Left CTR'.  \n  Use pickups with 'E'.", 5f));
     }
 
-    IEnumerator Introduction()
-    {
-        introductionField.enabled = true;
-        introductionField.text = "Welcome to Space 4 8. \n Move your ship with the arrows or WASD. \n Shoot with SPACE. \n Gather pickups and cycle with 'Left CTR'.  \n  Use pickups with 'E'.";
-        yield return new WaitForSeconds(5f);
-        introductionField.enabled = false;
-    }
-    public IEnumerator ShowMessage(string message)
+    public IEnumerator ShowMessage(string message, float activeTime)
     {
         messageField.enabled = true;
         messageField.text = message;
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(activeTime);
         messageField.enabled = false;
     }
 }
